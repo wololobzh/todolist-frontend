@@ -77,7 +77,7 @@ export const api = axios.create({
 });
 ```
 
-Si tu veux utiliser des variables d’environnement (optionnel) :
+Possiblité d'utiliser des variables d’environnement :
 
 1. Crée un fichier `.env` à la racine :
 
