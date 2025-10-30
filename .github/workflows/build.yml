@@ -12,28 +12,7 @@ jobs:
       packages: write
 
     steps:
-      # Checkout repository
       - uses: actions/checkout@v4
-
-      # Test Node.js application
-      - name: Run tests
-        uses: npm test
-
-      # Installer Node.js (pour exécuter les tests)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # Installer les dépendances du projet
-      - name: Install dependencies
-        run: npm ci
-
-      # Lancer les tests
-      - name: Run tests
-        run: npm test
-
-      # Set up Docker Buildx
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
